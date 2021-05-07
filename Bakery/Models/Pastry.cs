@@ -13,7 +13,14 @@ namespace Bakery
 
     public void GetPastryCost()
     {
-      PastryTotalCost = PastryCount * 2;
+      if (PastryCount >= 3)
+      {
+        PastryTotalCost = (((PastryCount / 3) * 5) + ((PastryCount % 3) * 2));
+      }
+      else
+      {
+        PastryTotalCost = PastryCount * 2;
+      }
     }
   }
 }
