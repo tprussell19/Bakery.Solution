@@ -72,4 +72,15 @@ namespace Bakery.Tests
       Assert.AreEqual(3, result);
     }
   }
+
+  [TestClass]
+  public class PastryOrderTests
+  {
+    [TestMethod]
+    public void PastryOrderConstructor_CreateInstanceOfPastryOrder_PastryOrder()
+    {
+      PastryOrder newPastryOrder = new PastryOrder("1");
+      Assert.AreEqual(typeof(PastryOrder), newPastryOrder.GetType());
+    }
+  }
 }
