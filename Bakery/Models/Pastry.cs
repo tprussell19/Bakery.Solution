@@ -10,5 +10,10 @@ namespace Bakery
       PastryCount = int.Parse(userInput);
       PastryTotalCost = 0;
     }
+
+    public void GetPastryCost()
+    {
+      PastryTotalCost = PastryCount * 2;
+    }
   }
 }
