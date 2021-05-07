@@ -1,11 +1,18 @@
 namespace Bakery.Models
 {
-  public class Bread
+  public class BreadOrder
   {
+    public int BreadCount { get; set; }
+    public int BreadTotalCost { get; set; }
 
+    public BreadOrder(string userInput)
+    {
+      BreadCount = int.Parse(userInput);
+      BreadTotalCost = 0;
+    }
   }
 
-  public class Pastry
+  public class PastryOrder
   {
 
   }
