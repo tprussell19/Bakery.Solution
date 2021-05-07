@@ -26,5 +26,19 @@ namespace Bakery.TestTools
       //Assert
       Assert.AreEqual(1, result);
     }
+
+    [TestMethod]
+    public void GetBreadTotalCost_ReturnsBreadTotalCost_Int()
+    {
+      //Arrange
+      string orderAmount = "1";
+      BreadOrder newBreadOrder = new BreadOrder(orderAmount);
+
+      //Act
+      int result = newBreadOrder.BreadTotalCost;
+
+      //Assert
+      Assert.AreEqual(5, result);
+    }
   }
 }
