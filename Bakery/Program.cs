@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Template.Solutions
+namespace Bakery.Solutions
 {
   class Program
   {

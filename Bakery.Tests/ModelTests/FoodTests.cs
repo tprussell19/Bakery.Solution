@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Template.Models;
+using Bakery.Models;
 
-namespace Template.TestTools
+namespace Bakery.TestTools
 {
   [TestClass]
   public class Program
