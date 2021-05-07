@@ -4,8 +4,13 @@ using Bakery.Models;
 namespace Bakery.TestTools
 {
   [TestClass]
-  public class Program
+  public class FoodTests
   {
-    //HERE IS WHERE YOU NEED TO PASS YOUR TESTS INTO.
+    [TestMethod]
+    public void BreadOrderConstructor_CreateInstanceOfBreadOrder_BreadOrder()
+    {
+      BreadOrder newBreadOrder = new BreadOrder("1");
+      Assert.AreEqual(typeof(BreadOrder), newBreadOrder.GetType());
+    }
   }
 }
