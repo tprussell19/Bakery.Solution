@@ -41,5 +41,20 @@ namespace Bakery.Tests
       //Assert
       Assert.AreEqual(5, result);
     }
+
+    [TestMethod]
+    public void GetBreadTotalCostWithPromo_ReturnsBreadTotalCost_Int()
+    {
+      //Arrange
+      string orderAmount = "3";
+      BreadOrder newBreadOrder = new BreadOrder(orderAmount);
+
+      //Act
+      newBreadOrder.GetBreadCost();
+      int result = newBreadOrder.BreadTotalCost;
+
+      //Assert
+      Assert.AreEqual(10, result);
+    }
   }
 }
