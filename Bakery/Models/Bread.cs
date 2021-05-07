@@ -19,6 +19,7 @@ namespace Bakery
         int paidBread = BreadCount - (BreadCount / 3);
         int freeBread = BreadCount - paidBread;
         BreadTotalCost = BreadTotalCost - (freeBread * 5);
+        GetFreeBread();
       }
     }
 

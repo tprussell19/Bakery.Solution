@@ -71,6 +71,21 @@ namespace Bakery.Tests
       //Assert
       Assert.AreEqual(3, result);
     }
+
+    [TestMethod]
+    public void GiveFreeBreadWhenBreadCountHitsPromoInCostMethod_ReturnsBreadCount_Int()
+    {
+      //Arrange
+      string orderAmount = "2";
+      BreadOrder newBreadOrder = new BreadOrder(orderAmount);
+
+      //Act
+      newBreadOrder.GetBreadCost();
+      int result = newBreadOrder.BreadCount;
+
+      //Assert
+      Assert.AreEqual(3, result);
+    }
   }
 
   [TestClass]
