@@ -111,5 +111,20 @@ namespace Bakery.Tests
       //Assert
       Assert.AreEqual(2, result);
     }
+
+    [TestMethod]
+    public void GetPastryTotalCostWithPromo_ReturnsPastryTotalCost_Int()
+    {
+      //Arrange
+      string orderAmount = "4";
+      PastryOrder newPastryOrder = new PastryOrder(orderAmount);
+
+      //Act
+      newPastryOrder.GetPastryCost();
+      int result = newPastryOrder.PastryTotalCost;
+
+      //Assert
+      Assert.AreEqual(7, result);
+    }
   }
 }
