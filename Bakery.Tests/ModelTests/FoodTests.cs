@@ -35,6 +35,7 @@ namespace Bakery.TestTools
       BreadOrder newBreadOrder = new BreadOrder(orderAmount);
 
       //Act
+      newBreadOrder.GetBreadCost();
       int result = newBreadOrder.BreadTotalCost;
 
       //Assert
