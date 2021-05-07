@@ -14,11 +14,12 @@ namespace Bakery
     public void GetBreadCost()
     {
       BreadTotalCost = BreadCount * 5;
-      // if (BreadCount >= 2)
-      // {
-      //   int freeBread = BreadCount - (BreadCount / 2);
-      //   BreadTotalCost = BreadTotalCost - (freeBread * 5);
-      // }
+      if (BreadCount >= 2)
+      {
+        int paidBread = BreadCount - (BreadCount / 3);
+        int freeBread = BreadCount - paidBread;
+        BreadTotalCost = BreadTotalCost - (freeBread * 5);
+      }
     }
   }
 }
