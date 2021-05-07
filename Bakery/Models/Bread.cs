@@ -21,5 +21,13 @@ namespace Bakery
         BreadTotalCost = BreadTotalCost - (freeBread * 5);
       }
     }
+
+    public void GetFreeBread()
+    {
+      if (BreadCount % 3 == 2)
+      {
+        BreadCount += 1;
+      }
+    }
   }
 }
