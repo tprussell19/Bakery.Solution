@@ -37,7 +37,7 @@
 
 ## License
 
-_MIT © THomas Russell 2021_
+_MIT © Thomas Russell 2021_
 
 ## Contact Information
 
