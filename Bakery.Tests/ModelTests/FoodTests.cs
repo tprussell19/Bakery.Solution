@@ -82,5 +82,19 @@ namespace Bakery.Tests
       PastryOrder newPastryOrder = new PastryOrder("1");
       Assert.AreEqual(typeof(PastryOrder), newPastryOrder.GetType());
     }
+
+    [TestMethod]
+    public void GetPastryCount_ReturnsPastryCount_Int()
+    {
+      //Arrange
+      string orderAmount = "1";
+      PastryOrder newPastryOrder = new PastryOrder(orderAmount);
+
+      //Act
+      int result = newPastryOrder.PastryCount;
+
+      //Assert
+      Assert.AreEqual(1, result);
+    }
   }
 }
