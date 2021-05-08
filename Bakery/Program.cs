@@ -52,15 +52,15 @@ namespace Bakery.Solutions
         int parsedInput;
         if (int.TryParse(userInput, out parsedInput) || parsedInput <= 0)
         {
-          Console.WriteLine("Please enter a valid number.");
-          BuyBread();
-        }
-        else
-        {
           BreadOrder newBreadOrder = new BreadOrder(userInput);
           newBreadOrder.GetBreadCost();
           _totalCost += newBreadOrder.BreadTotalCost;
           Console.WriteLine("That will be $" + newBreadOrder.BreadTotalCost + " for " + newBreadOrder.BreadCount + " loaves of bread!");
+        }
+        else
+        {
+          Console.WriteLine("Please enter a valid number.");
+          BuyBread();
         }
       }
       else if (buyBread == "n")
@@ -82,17 +82,17 @@ namespace Bakery.Solutions
         Console.WriteLine("How many pastries would you like?");
         string userInput = Console.ReadLine();
         int parsedInput;
-        if (int.TryParse(userInput, out parsedInput) || parsedInput <= 0)
-        {
-          Console.WriteLine("Please enter a valid number.");
-          BuyPastry();
-        }
-        else
+        if (int.TryParse(userInput, out parsedInput) || parsedInput < 0)
         {
           PastryOrder newPastryOrder = new PastryOrder(userInput);
           newPastryOrder.GetPastryCost();
           _totalCost += newPastryOrder.PastryTotalCost;
           Console.WriteLine("That will be $" + newPastryOrder.PastryTotalCost + " for " + newPastryOrder.PastryCount + " pastries!");
+        }
+        else
+        {
+          Console.WriteLine("Please enter a valid number.");
+          BuyPastry();
         }
       }
       else if (buyPastry == "n")
