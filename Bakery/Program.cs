@@ -14,6 +14,8 @@ namespace Bakery.Solutions
       BuyStuff();
     }
 
+    private static int _totalCost = 0;
+
     static void BuyStuff()
     {
       Console.WriteLine("Would you like to purchase anything? (Y/N)");
@@ -22,6 +24,11 @@ namespace Bakery.Solutions
       {
         BuyBread();
         BuyPastry();
+        if (_totalCost > 0)
+        {
+          Console.WriteLine("Your total today is $" + _totalCost + ".");
+        }
+        Console.WriteLine("Thank you for choosing Pierre's Bakery! We hope to see you again soon!");
       }
       else if (buyStuff == "n")
       {
@@ -52,6 +59,7 @@ namespace Bakery.Solutions
         {
           BreadOrder newBreadOrder = new BreadOrder(userInput);
           newBreadOrder.GetBreadCost();
+          _totalCost += newBreadOrder.BreadTotalCost;
           Console.WriteLine("That will be $" + newBreadOrder.BreadTotalCost + " for " + newBreadOrder.BreadCount + " loaves of bread!");
         }
       }
@@ -83,12 +91,12 @@ namespace Bakery.Solutions
         {
           PastryOrder newPastryOrder = new PastryOrder(userInput);
           newPastryOrder.GetPastryCost();
+          _totalCost += newPastryOrder.PastryTotalCost;
           Console.WriteLine("That will be $" + newPastryOrder.PastryTotalCost + " for " + newPastryOrder.PastryCount + " pastries!");
         }
       }
       else if (buyPastry == "n")
       {
-        Console.WriteLine("Thank you for choosing Pierre's Bakery! We hope to see you again soon!");
       }
       else
       {
