@@ -1,6 +1,6 @@
-# _{Application Name}_
+# _Pierre's Bakery_
 
-#### _{Brief description of application}_
+#### _A bakery console application_
 
 #### By _Thomas Russell_
 
@@ -12,28 +12,35 @@
 
 ## Description
 
-\_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}
+_This is a C# console application that acts as a bakery storefront. Users can decide if they would like to buy bread, pastries, both, or neither. The bakery also is running specials that can change the price and/or quantity of the order. A user inputs how many loaves of bread and how many pastries they want and the application returns the price and quantity for each as well as a total price._
+
+## Setup and Use
 
 ### Prerequisites
 
+- [.NET 5 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
 - A text editor like [VS Code](https://code.visualstudio.com/)
+- A command line interface like Terminal or GitBash to run and interact with the console app.
 
-## Setup/Installation Requirements
+### Installation
 
-1. Clone the repository: `$ git clone https://github.com/account/my-project`
-2. Navigate to the `my-project/` directory on your computer
+1. Clone the repository: `$ git clone https://github.com/tprussell19/Bakery.Solution`
+2. Navigate to the `Bakery.Solution/` directory on your computer
 3. Open with your preferred text editor to view the code base
-4. To start a development server and view the project in the browser:
-   - _Navigate to `my-project/` in your command line_
-   - _Run the command `npm install` to install dependencies_
-   - _Optionally, run the commmand `npm run build` to make a bundle of the files_
-   - _Finally, run the command `npm run start` to start a development server_
-5. To run tests, navigate to `my-project/` in your terminal and run the command `npm run test`
+4. To run the console app:
+   - Navigate to `Bakery.Solution/Bakery` in your command line
+   - Run the command `dotnet restore` to restore the dependencies that are listed in the .csproj
+   - Run the commmand `dotnet build` to build the project and its dependencies into a set of binaries
+   - Finally, run the command `dotnet run` to run the project!
+   - Note: `dotnet run` also restores and builds the project, so you can use this single command to start the console app
+5. To run tests:
+   - Navigate to `Bakery.Solution/Bakery.Tests` in your command line.
+   - Run the command `dotnet restore` to restore the dependencies that are listed in the .csproj
+   - Finally, run the command `dotnet test` to run the tests!
 
 ## Known Bugs
 
-- _Any known issues_
-- _should go here_
+- _No known bugs_
 
 ## License
 
