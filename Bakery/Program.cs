@@ -51,13 +51,12 @@ namespace Bakery.Solutions
         else
         {
           BreadOrder newBreadOrder = new BreadOrder(userInput);
-          Console.WriteLine("That will be $" + newBreadOrder.BreadTotalCost + " for " + " loaves of bread!");
-          BuyPastry();
+          newBreadOrder.GetBreadCost();
+          Console.WriteLine("That will be $" + newBreadOrder.BreadTotalCost + " for " + newBreadOrder.BreadCount + " loaves of bread!");
         }
       }
       else if (buyBread == "n")
       {
-        BuyPastry();
       }
       else
       {
@@ -83,7 +82,8 @@ namespace Bakery.Solutions
         else
         {
           PastryOrder newPastryOrder = new PastryOrder(userInput);
-          Console.WriteLine("That will be $" + newPastryOrder.PastryTotalCost + " for " + " pastries!");
+          newPastryOrder.GetPastryCost();
+          Console.WriteLine("That will be $" + newPastryOrder.PastryTotalCost + " for " + newPastryOrder.PastryCount + " pastries!");
         }
       }
       else if (buyPastry == "n")
