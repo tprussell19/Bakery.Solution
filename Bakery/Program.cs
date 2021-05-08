@@ -49,8 +49,8 @@ namespace Bakery.Solutions
       {
         Console.WriteLine("How many loaves of bread would you like?");
         string userInput = Console.ReadLine();
-        int parsedInput = int.Parse(userInput);
-        if (parsedInput <= 0)
+        int parsedInput;
+        if (int.TryParse(userInput, out parsedInput) || parsedInput <= 0)
         {
           Console.WriteLine("Please enter a valid number.");
           BuyBread();
@@ -81,8 +81,8 @@ namespace Bakery.Solutions
       {
         Console.WriteLine("How many pastries would you like?");
         string userInput = Console.ReadLine();
-        int parsedInput = int.Parse(userInput);
-        if (parsedInput <= 0)
+        int parsedInput;
+        if (int.TryParse(userInput, out parsedInput) || parsedInput <= 0)
         {
           Console.WriteLine("Please enter a valid number.");
           BuyPastry();
